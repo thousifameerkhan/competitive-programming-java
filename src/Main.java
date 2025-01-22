@@ -1,17 +1,15 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Arrays;
+
 
 public class Main {
     public static void main(String[] args) {
         //System.out.println("Hello, World!");
 
-        String[] strs = {"dog","racecar","car"};
+        //String[] strs = {"dog","racecar","car"};
 
-        String[] words1 = {"amazon","apple","facebook","google","leetcode"};
-        String[] words2 = {"l","e"};
+        //String[] words1 = {"amazon","apple","facebook","google","leetcode"};
+        //String[] words2 = {"l","e"};
 
-        Array2DVisit a = new Array2DVisit();
+        //Array2DVisit a = new Array2DVisit();
         //System.out.println(a.helloWorld());
 
 //        int[]   arr = {1,3,4,2,10};
