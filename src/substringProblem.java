@@ -4,14 +4,12 @@ import java.util.List;
 public class substringProblem {
 
 
-
     public List<String> wordSubsets(String[] words1, String[] words2) {
 
         List<String> result_List = new ArrayList<>();
 
-        for(String check_word:words1)
-        {
-            boolean isSubset = checkSubset(check_word,words2);
+        for (String check_word : words1) {
+            boolean isSubset = checkSubset(check_word, words2);
         }
 
 //        Input: words1 = ["amazon","apple","facebook","google","leetcode"],
@@ -22,14 +20,11 @@ public class substringProblem {
 
     }
 
-    public boolean checkSubset(String s1,String[] c1)
-    {
+    public boolean checkSubset(String s1, String[] c1) {
         boolean result_boolean = false;
 
-        for(String c1_item:c1)
-        {
-            for(int i=0;i<c1_item.length();i++)
-            {
+        for (String c1_item : c1) {
+            for (int i = 0; i < c1_item.length(); i++) {
 
             }
         }

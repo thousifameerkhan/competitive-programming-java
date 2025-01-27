@@ -5,34 +5,29 @@ public class pallindromeProblem {
 
         boolean result = false;
 
-        if(k<=s.length())
-        {
+        if (k <= s.length()) {
             int[] charCount = new int[26];
 
-            for(char c:s.toCharArray())
-                charCount[c-'a']++;
+            for (char c : s.toCharArray())
+                charCount[c - 'a']++;
 
-            int oddNumberChars,evenNumberChars;
+            int oddNumberChars, evenNumberChars;
             evenNumberChars = oddNumberChars = 0;
 
-            for(int i=0;i<26;i++)
-                if(charCount[i]%2 == 0)
+            for (int i = 0; i < 26; i++)
+                if (charCount[i] % 2 == 0)
                     evenNumberChars++;
                 else oddNumberChars++;
 
-            if(oddNumberChars>k){
+            if (oddNumberChars > k) {
                 result = false;
-            }
-            else
-            {
-                result=true;
+            } else {
+                result = true;
             }
         }
         return result;
 
     }
-
-
 
 
 }

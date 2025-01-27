@@ -16,10 +16,10 @@ public class Main {
 //        int[][] mat = {{1,4},{2,3}};
 
 //        int[]   arr = {1,4,5,2,6,3};
-          int[][] mat = {{20,3,20,17,2,12,15,17,4,15},{20,10,13,14,15,5,2,3,14,3}};
+        int[][] mat = {{20, 3, 20, 17, 2, 12, 15, 17, 4, 15}, {20, 10, 13, 14, 15, 5, 2, 3, 14, 3}};
 
-          gridGame_v2 g = new gridGame_v2();
-        System.out.println("result : "+g.gridGame(mat));
+        gridGame_v2 g = new gridGame_v2();
+        System.out.println("result : " + g.gridGame(mat));
 
         //a.firstCompleteIndex(arr,mat);
         //System.out.println("result : "+a.firstCompleteIndex(arr,mat));
@@ -45,27 +45,21 @@ public class Main {
 
     public String longestCommonPrefix(String[] strs) {
 
-        String result_prefix="";
-        String temp_result="";
+        String result_prefix = "";
+        String temp_result = "";
         int string_array_length = strs.length;
 
-        if (string_array_length == 1)
-        {
+        if (string_array_length == 1) {
             result_prefix = strs[0];
 
-        }
-        else if(string_array_length == 2)
-        {
-            result_prefix = common_prefix(strs[0],strs[1]);
-        }
-        else{
+        } else if (string_array_length == 2) {
+            result_prefix = common_prefix(strs[0], strs[1]);
+        } else {
 
             temp_result = strs[0];
-            for(int i= 1; i<string_array_length;i++)
-            {
-                temp_result = common_prefix(temp_result,strs[i]);
-                if(temp_result.equals(""))
-                {
+            for (int i = 1; i < string_array_length; i++) {
+                temp_result = common_prefix(temp_result, strs[i]);
+                if (temp_result.equals("")) {
 
                     break;
                 }
@@ -75,27 +69,22 @@ public class Main {
         return result_prefix;
     }
 
-    public String common_prefix(String s1,String s2)
-    {
+    public String common_prefix(String s1, String s2) {
         //make sure that s1 is smaller
         String sub_prefix = "";
         String temp;
 
-        if (s1.length() > s2.length())
-        {
+        if (s1.length() > s2.length()) {
             temp = s1;
             s1 = s2;
-            s2= temp;
+            s2 = temp;
         }
 
 
-        for(int k=0; k<s1.length(); k++)
-        {
-            if(s1.charAt(k) == s2.charAt(k))
-            {
+        for (int k = 0; k < s1.length(); k++) {
+            if (s1.charAt(k) == s2.charAt(k)) {
                 sub_prefix = sub_prefix + s1.charAt(k);
-            }else
-            {
+            } else {
                 break;
             }
         }
@@ -103,30 +92,16 @@ public class Main {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     public int countPrefixSuffixPairs(String[] words) {
 
         int n = words.length;
         int result = 0;
 
-        for(int i=0;i<n;i=i+1)
-        {
+        for (int i = 0; i < n; i = i + 1) {
             //System.out.println(words[i]);
-            for(int j=i+1;j<n;j=j+1)
-            {
+            for (int j = i + 1; j < n; j = j + 1) {
                 System.out.println(words[i]);
-                if(isPrefixAndSuffix(words[i],words[j]))
-                {
+                if (isPrefixAndSuffix(words[i], words[j])) {
                     result++;
                 }
             }
@@ -135,38 +110,33 @@ public class Main {
     }
 
 
-    public boolean isPrefixAndSuffix(String A,String B)
-    {
-        boolean result_prefix_suffix  = false;
+    public boolean isPrefixAndSuffix(String A, String B) {
+        boolean result_prefix_suffix = false;
 
-        System.out.println(" A string : "+A);
-        System.out.println(" B string : "+B);
+        System.out.println(" A string : " + A);
+        System.out.println(" B string : " + B);
 
         int a_length = A.length();
         int b_length = B.length();
-        String prefix,suffix;
+        String prefix, suffix;
 
-        if (a_length > b_length )
-        {
-            result_prefix_suffix  = false;
-        }
-        else
-        {
+        if (a_length > b_length) {
+            result_prefix_suffix = false;
+        } else {
             prefix = B.substring(0, a_length);
-            suffix = B.substring(b_length-a_length);
+            suffix = B.substring(b_length - a_length);
 
-            System.out.println("prefix : "+prefix);
-            System.out.println("suffix : "+suffix);
+            System.out.println("prefix : " + prefix);
+            System.out.println("suffix : " + suffix);
 
             if (A.equals(prefix) && prefix.equals(suffix)) {
 
                 System.out.println("came in : ");
-                result_prefix_suffix  = true;
+                result_prefix_suffix = true;
             }
         }
         return result_prefix_suffix;
     }
-
 
 
 }
