@@ -1,17 +1,9 @@
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class substringProblem {
 
-//public static void Main(String[] args)
-//{
-//    System.out.println("Hello World");
-//}
 
-    public String helloWorld()
-    {
-        return "HelloWorld from substring";
-    }
 
     public List<String> wordSubsets(String[] words1, String[] words2) {
 
